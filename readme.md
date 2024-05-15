@@ -26,6 +26,9 @@ To Export All the Packages
 pip freeze > requirements.txt
 
 
+To import All the packages
+pip install -r requirements.txt
+
 For Django
 pip install Django
 pip install djangorestframework
