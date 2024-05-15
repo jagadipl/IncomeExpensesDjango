@@ -8,6 +8,10 @@ class Income(models.Model):
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     category = models.CharField(max_length=100)
     remarks = models.TextField(blank=True)
+    
+    def __str__(self) ->str:
+        return self.category
+    
 
 class Expenses(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -15,3 +19,6 @@ class Expenses(models.Model):
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     category = models.CharField(max_length=100)
     remarks = models.TextField(blank=True)    
+
+    def __str__(self) -> str:
+        return self.category
